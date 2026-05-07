@@ -7,7 +7,7 @@ node {
         checkout scm
     }
 
-    stage('Update GIT') {
+    stage('ManifestUpdate') {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     // 'github' must match your Jenkins Credentials ID for Git
