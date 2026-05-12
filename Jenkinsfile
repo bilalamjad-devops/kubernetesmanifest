@@ -19,7 +19,7 @@ node {
                         
                         // This updates the 'image' field in deployment.yaml to the new tag
                         //👉 CHANGE: Ensure the regex 'Your-Docker-Hub-Username/test.*' matches your YAML image string
-                        sh "sed -i 's+bilalamjaddevops/test.*+bilalamjaddevops/test:${DOCKERTAG}+g' deployment.yaml"
+                        sh "sed -i 's+Your-Docker-Hub-Username/test.*+Your-Docker-Hub-Username/test:${DOCKERTAG}+g' deployment.yaml"
                         
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
